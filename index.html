@@ -86,32 +86,16 @@
       letter-spacing: -.04em;
     }
 
-    .brand h1 {
-      margin: 0;
-      font-size: 1.08rem;
-      line-height: 1.1;
-    }
+    .brand h1 { margin: 0; font-size: 1.08rem; line-height: 1.1; }
+    .brand p { margin: 3px 0 0; color: var(--muted); font-size: .9rem; }
 
-    .brand p {
-      margin: 3px 0 0;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .navlinks {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 8px;
-    }
-
+    .navlinks { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
     .navlinks a {
       padding: 10px 14px;
       border-radius: 999px;
       color: var(--muted);
       transition: .25s ease;
     }
-
     .navlinks a:hover {
       background: rgba(255,255,255,.08);
       color: var(--text);
@@ -134,19 +118,13 @@
       white-space: nowrap;
       font-size: 1rem;
     }
-
     .btn:hover { transform: translateY(-2px) scale(1.01); }
     .btn-primary { background: linear-gradient(135deg, var(--accent), #59f4ff); color: #021017; }
     .btn-secondary { background: rgba(255,255,255,.08); color: var(--text); border: 1px solid var(--line); }
     .btn-dark { background: linear-gradient(135deg, #151a2d, #0d1424); color: var(--text); border: 1px solid rgba(255,255,255,.1); }
 
     .hero { padding: 48px 0 18px; }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 24px;
-      align-items: center;
-    }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: center; }
 
     .eyebrow {
       display: inline-flex;
@@ -169,7 +147,6 @@
       box-shadow: 0 0 0 0 rgba(44, 255, 143, .5);
       animation: pulse 1.8s infinite;
     }
-
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(44, 255, 143, .55); }
       70% { box-shadow: 0 0 0 14px rgba(44, 255, 143, 0); }
@@ -183,7 +160,6 @@
       letter-spacing: -.05em;
       font-weight: 900;
     }
-
     .title span {
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       -webkit-background-clip: text;
@@ -191,26 +167,9 @@
       color: transparent;
     }
 
-    .lead {
-      margin: 0 0 24px;
-      color: var(--muted);
-      font-size: var(--big);
-      max-width: 68ch;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
+    .lead { margin: 0 0 24px; color: var(--muted); font-size: var(--big); max-width: 68ch; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; }
     .badge {
       padding: 10px 13px;
       border-radius: 999px;
@@ -228,7 +187,6 @@
       overflow: hidden;
       position: relative;
     }
-
     .panel::before {
       content: "";
       position: absolute;
@@ -237,17 +195,8 @@
                   radial-gradient(circle at bottom left, rgba(124,92,255,.16), transparent 30%);
       pointer-events: none;
     }
-
     .panel-content { padding: 18px; position: relative; z-index: 1; }
-
-    .panel-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-
+    .panel-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
     .live {
       display: inline-flex;
       align-items: center;
@@ -267,16 +216,8 @@
       border: 1px solid var(--line);
       aspect-ratio: 16 / 11;
     }
-
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .35s ease;
-    }
-
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
     .hero-image:hover img { transform: scale(1.05); }
-
     .hero-overlay {
       position: absolute;
       left: 14px;
@@ -288,50 +229,22 @@
       border: 1px solid rgba(255,255,255,.12);
       backdrop-filter: blur(10px);
     }
-
     .hero-overlay strong { display: block; margin-bottom: 2px; font-size: 1.05rem; }
     .hero-overlay span { color: var(--muted); font-size: .95rem; }
 
-    .mini-stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .mini-stat {
-      padding: 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid var(--line);
-    }
-
-    .mini-stat strong {
-      display: block;
-      font-size: 1.7rem;
-      margin-bottom: 4px;
-    }
-
+    .mini-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 14px; }
+    .mini-stat { padding: 16px; border-radius: 18px; background: rgba(255,255,255,.06); border: 1px solid var(--line); }
+    .mini-stat strong { display: block; font-size: 1.7rem; margin-bottom: 4px; }
     .mini-stat span { color: var(--muted); font-size: .95rem; }
 
     .section { padding: 28px 0; }
-    .section h2 {
-      margin: 0 0 12px;
-      font-size: clamp(1.8rem, 3.4vw, 2.7rem);
-      line-height: 1.05;
-    }
-    .section .sub {
-      margin: 0 0 18px;
-      color: var(--muted);
-      max-width: 86ch;
-      font-size: 1.06rem;
-    }
+    .section h2 { margin: 0 0 12px; font-size: clamp(1.8rem, 3.4vw, 2.7rem); line-height: 1.05; }
+    .section .sub { margin: 0 0 18px; color: var(--muted); max-width: 86ch; font-size: 1.06rem; }
 
     .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid, .pricing-grid, .testimonials-grid {
       display: grid;
       gap: 16px;
     }
-
     .stats-grid { grid-template-columns: repeat(4, 1fr); }
     .services-grid { grid-template-columns: repeat(3, 1fr); }
     .gallery-grid { grid-template-columns: repeat(3, 1fr); }
@@ -350,21 +263,9 @@
       box-shadow: var(--shadow);
       transition: .25s ease;
     }
-
-    .card:hover {
-      transform: translateY(-4px);
-      background: var(--panel-strong);
-      border-color: rgba(255,255,255,.18);
-    }
-
-    .stat-value {
-      font-size: 2.1rem;
-      font-weight: 900;
-      margin: 0 0 6px;
-    }
-
+    .card:hover { transform: translateY(-4px); background: var(--panel-strong); border-color: rgba(255,255,255,.18); }
+    .stat-value { font-size: 2.1rem; font-weight: 900; margin: 0 0 6px; }
     .stat-label { margin: 0; color: var(--muted); }
-
     .service-icon {
       width: 56px;
       height: 56px;
@@ -376,12 +277,7 @@
       border: 1px solid rgba(255,255,255,.12);
       font-size: 1.25rem;
     }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 1.08rem;
-    }
-
+    .card h3 { margin: 0 0 10px; font-size: 1.08rem; }
     .card p { margin: 0; color: var(--muted); }
 
     .image-box {
@@ -393,16 +289,8 @@
       box-shadow: var(--shadow);
       background: rgba(255,255,255,.04);
     }
-
-    .image-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .35s ease;
-    }
-
+    .image-box img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
     .image-box:hover img { transform: scale(1.06); }
-
     .image-caption {
       position: absolute;
       left: 12px;
@@ -425,11 +313,7 @@
       font-size: 1rem;
     }
 
-    .timeline {
-      display: grid;
-      gap: 14px;
-    }
-
+    .timeline { display: grid; gap: 14px; }
     .timeline-item {
       display: grid;
       grid-template-columns: 68px 1fr;
@@ -440,7 +324,6 @@
       background: rgba(255,255,255,.05);
       border: 1px solid var(--line);
     }
-
     .timeline-step {
       width: 56px;
       height: 56px;
@@ -452,23 +335,11 @@
       font-size: 1.12rem;
       font-weight: 900;
     }
-
     .timeline-item h3 { margin: 0 0 6px; }
     .timeline-item p { margin: 0; color: var(--muted); }
 
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: .92fr 1.08fr;
-      gap: 16px;
-      align-items: start;
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 12px;
-      margin: 14px 0 0;
-    }
-
+    .contact-wrap { display: grid; grid-template-columns: .92fr 1.08fr; gap: 16px; align-items: start; }
+    .contact-list { display: grid; gap: 12px; margin: 14px 0 0; }
     .contact-item {
       display: flex;
       align-items: center;
@@ -478,7 +349,6 @@
       background: rgba(255,255,255,.06);
       border: 1px solid var(--line);
     }
-
     .contact-item span {
       width: 40px;
       height: 40px;
@@ -488,23 +358,11 @@
       background: rgba(0,212,255,.14);
       flex: 0 0 auto;
     }
-
     .contact-item strong { display: block; }
     .contact-item small { color: var(--muted); }
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .footer {
-      padding: 28px 0 42px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 1rem;
-    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .footer { padding: 28px 0 42px; text-align: center; color: var(--muted); font-size: 1rem; }
 
     .floating {
       position: fixed;
@@ -514,7 +372,6 @@
       display: grid;
       gap: 10px;
     }
-
     .floating a {
       width: 56px;
       height: 56px;
@@ -537,28 +394,11 @@
       color: var(--muted);
       font-size: .98rem;
     }
+    .marquee span { display: inline-block; padding-left: 100%; animation: scroll 18s linear infinite; }
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
-    .marquee span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll 18s linear infinite;
-    }
-
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     .cursor-glow {
       position: fixed;
@@ -573,42 +413,19 @@
       opacity: .5;
     }
 
-    .price {
-      font-size: 2rem;
-      font-weight: 900;
-      margin: 0 0 10px;
-    }
-
-    .price small {
-      font-size: .95rem;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .quote {
-      font-size: 1.05rem;
-      color: var(--text);
-      margin: 0 0 12px;
-    }
-
-    .quote-author {
-      color: var(--muted);
-      font-size: .95rem;
-    }
+    .price { font-size: 2rem; font-weight: 900; margin: 0 0 10px; }
+    .price small { font-size: .95rem; color: var(--muted); font-weight: 700; }
+    .quote { font-size: 1.05rem; color: var(--text); margin: 0 0 12px; }
+    .quote-author { color: var(--muted); font-size: .95rem; }
 
     @media (max-width: 1080px) {
-      .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid, .pricing-grid, .testimonials-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr 1fr; }
     }
-
     @media (max-width: 760px) {
       .nav { flex-direction: column; align-items: flex-start; }
       .navlinks { justify-content: flex-start; }
       .hero-grid, .contact-wrap { grid-template-columns: 1fr; }
-      .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid, .pricing-grid, .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
+      .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
       .mini-stats { grid-template-columns: 1fr; }
       .title { font-size: clamp(2.1rem, 12vw, 3.8rem); }
       .timeline-item { grid-template-columns: 1fr; }
@@ -649,7 +466,7 @@
           <h1 class="title">Бърза <span>и надеждна</span> помощ за техника, компютри и мрежи.</h1>
           <p class="lead">
             Ремонт на компютри, лаптопи, сървъри, GPU, Wi‑Fi, IP устройства, принтери, антени и софтуерна диагностика.
-            Ясно подредено, лесно за ползване и насочено към бързо решение в София, с възможност за съдействие и на място при клиента.
+            Ясно подредено, лесно за ползване и насочено към бързо решение. София и съдействие на място при клиента.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Свържи се с нас</a>
@@ -670,11 +487,10 @@
             <div class="panel-head">
               <div>
                 <div style="color: var(--muted); font-size: .94rem;">Статус на услугите</div>
-                <div style="font-size: 1.3rem; font-weight: 800;">Бързи решения и ясна поддръжка</div>
+                <div style="font-size: 1.3rem; font-weight: 800;">Ефекти, секции и мощна визия</div>
               </div>
-              <div class="live"><span class="pulse"></span> Готово за работа</div>
+              <div class="live"><span class="pulse"></span> Онлайн визия</div>
             </div>
-
             <div class="hero-image">
               <img src="ak8vbsysk0nj9csa7pos3qf5769wfn495626.webp" alt="Топ БГ Тех - основна снимка">
               <div class="hero-overlay">
@@ -682,12 +498,11 @@
                 <span>Тъмен фон, ярки акценти и силен визуален удар.</span>
               </div>
             </div>
-
             <div class="mini-stats">
               <div class="mini-stat"><strong data-count="14">0</strong><span>готови секции</span></div>
-              <div class="mini-stat"><strong data-count="12">0</strong><span>основни услуги</span></div>
+              <div class="mini-stat"><strong data-count="12">0</strong><span>показани услуги</span></div>
               <div class="mini-stat"><strong data-count="9">0</strong><span>тематични области</span></div>
-              <div class="mini-stat"><strong data-count="100">0</strong><span>% подредено</span></div>
+              <div class="mini-stat"><strong data-count="100">0</strong><span>% по-чист дизайн</span></div>
             </div>
           </div>
         </div>
@@ -700,9 +515,9 @@
     <section class="section reveal">
       <div class="container">
         <div class="stats-grid">
-          <div class="card"><div class="stat-value">01</div><p class="stat-label">Ясен и силен старт</p></div>
-          <div class="card"><div class="stat-value">02</div><p class="stat-label">Реални услуги, без излишно усложнение</p></div>
-          <div class="card"><div class="stat-value">03</div><p class="stat-label">Плавни ефекти и модерна визия</p></div>
+          <div class="card"><div class="stat-value">01</div><p class="stat-label">Модерен, чист и внушителен старт</p></div>
+          <div class="card"><div class="stat-value">02</div><p class="stat-label">Подходящ за реална фирмена визия</p></div>
+          <div class="card"><div class="stat-value">03</div><p class="stat-label">Много анимации и hover ефекти</p></div>
           <div class="card"><div class="stat-value">04</div><p class="stat-label">Работи добре на телефон и компютър</p></div>
         </div>
       </div>
@@ -732,7 +547,7 @@
     <section class="section reveal" id="hardware">
       <div class="container">
         <h2>Хардуер, софтуер и техника</h2>
-        <p class="sub">Основните области, които клиентите търсят най-често.</p>
+        <p class="sub">Показани са главните области, които най-често се търсят при ремонт и поддръжка.</p>
         <div class="chips-grid">
           <div class="tagline">💻 Компютри</div>
           <div class="tagline">🎮 GPU / видеокарти</div>
@@ -749,7 +564,7 @@
     <section class="section reveal" id="gallery">
       <div class="container">
         <h2>Галерия</h2>
-        <p class="sub">Подбрани тематични снимки за техника, сервиз и поддръжка.</p>
+        <p class="sub">Добавени са повече тематични снимки, за да има реално усещане за техника, сервиз и професионална поддръжка.</p>
         <div class="gallery-grid">
           <div class="image-box"><img src="ak8vbsysk0nj9csa7pos3qf5769wfn495626.webp" alt="Компютърна техника"><div class="image-caption">Основна визия на Топ БГ Тех</div></div>
           <div class="image-box"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Хардуер и електроника"><div class="image-caption">Хардуер и електроника</div></div>
@@ -759,7 +574,7 @@
           <div class="image-box"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Работно място"><div class="image-caption">Работно място за поддръжка</div></div>
           <div class="image-box"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Технологична визия"><div class="image-caption">Технологична визия</div></div>
           <div class="image-box"><img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&q=80" alt="Принтер и офис техника"><div class="image-caption">Принтери и офис техника</div></div>
-          <div class="image-box"><img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80" alt="Wi-Fi и периферия"><div class="image-caption">Wi‑Fi и периферия</div></div>
+          <div class="image-box"><img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80" alt="Wi‑Fi и периферия"><div class="image-caption">Wi‑Fi и периферия</div></div>
           <div class="image-box"><img src="https://images.unsplash.com/photo-1558403194-611308249627?auto=format&fit=crop&w=1200&q=80" alt="Видеокарта и GPU"><div class="image-caption">GPU и видеокарти</div></div>
           <div class="image-box"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" alt="Системна поддръжка"><div class="image-caption">Софтуерна поддръжка</div></div>
           <div class="image-box"><img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=1200&q=80" alt="Техника и мрежи"><div class="image-caption">Техника и мрежови решения</div></div>
@@ -770,7 +585,7 @@
     <section class="section reveal" id="pricing">
       <div class="container">
         <h2>Пакети</h2>
-        <p class="sub">Готови варианти за различни нужди.</p>
+        <p class="sub">Готови и ясни варианти за различни нужди.</p>
         <div class="pricing-grid">
           <div class="card">
             <h3>Базов пакет</h3>
@@ -821,18 +636,9 @@
         <h2>Отзиви</h2>
         <p class="sub">Кратки и ясни мнения за доверие.</p>
         <div class="testimonials-grid">
-          <div class="card">
-            <p class="quote">„Много подредено, всичко се разбира веднага.“</p>
-            <div class="quote-author">— Клиент</div>
-          </div>
-          <div class="card">
-            <p class="quote">„Стои професионално и показва точните услуги.“</p>
-            <div class="quote-author">— Партньор</div>
-          </div>
-          <div class="card">
-            <p class="quote">„Снимките и тъмният стил подхождат отлично на сервиз.“</p>
-            <div class="quote-author">— Посетител</div>
-          </div>
+          <div class="card"><p class="quote">„Много подредено, всичко се разбира веднага.“</p><div class="quote-author">— Клиент</div></div>
+          <div class="card"><p class="quote">„Стои професионално и показва точните услуги.“</p><div class="quote-author">— Партньор</div></div>
+          <div class="card"><p class="quote">„Снимките и тъмният стил подхождат отлично на сервиз.“</p><div class="quote-author">— Посетител</div></div>
         </div>
       </div>
     </section>
@@ -854,9 +660,9 @@
       <div class="container">
         <h2>Често задавани въпроси</h2>
         <div class="faq-grid">
-          <div class="card"><h3>Какво ремонтирате?</h3><p>Компютри, лаптопи, сървъри, GPU, Wi‑Fi, IP устройства, принтери и още, с възможност за работа в София и на място при клиента.</p></div>
+          <div class="card"><h3>Какво ремонтирате?</h3><p>Компютри, лаптопи, сървъри, GPU, Wi‑Fi, IP устройства, принтери и още.</p></div>
           <div class="card"><h3>Има ли контакт по имейл?</h3><p>Да, имейлът е <strong>djhsj8375@gmail.com</strong>.</p></div>
-          <div class="card"><h3>Подходящо ли е за офис и дом?</h3><p>Да, услугите са подходящи и за домашни, и за фирмени нужди в София, с възможност за съдействие и на място при клиента.</p></div>
+          <div class="card"><h3>Подходящо ли е за офис и дом?</h3><p>Да, услугите са подходящи и за домашни, и за фирмени нужди.</p></div>
           <div class="card"><h3>Има ли снимки?</h3><p>Да, галерията е подредена с много тематични снимки за техниката.</p></div>
         </div>
       </div>
@@ -866,7 +672,7 @@
       <div class="container contact-wrap">
         <div class="card">
           <h2>Контакти</h2>
-          <p class="sub">Свържи се по най-удобния начин.</p>
+          <p class="sub">Свържи се по най-удобния начин. София и съдействие на място при клиента.</p>
           <div class="contact-list">
             <div class="contact-item"><span>📞</span><div><strong>Телефон</strong><small>0888826083</small></div></div>
             <div class="contact-item"><span>📧</span><div><strong>Email</strong><small>djhsj8375@gmail.com</small></div></div>
@@ -891,7 +697,7 @@
             <img src="https://images.unsplash.com/photo-1558403194-611308249627?auto=format&fit=crop&w=1200&q=80" alt="GPU и видео техника">
             <div class="image-caption">GPU и видеокарти</div>
           </div>
-          <p style="margin: 0; color: var(--muted); font-size: 1.02rem;">Подредена визия, големи заглавия, силни снимки и ясни действия за клиента в София и при посещение на място.</p>
+          <p style="margin: 0; color: var(--muted); font-size: 1.02rem;">Подредена визия, големи заглавия, силни снимки и ясни действия за клиента.</p>
         </div>
       </div>
     </section>
@@ -923,7 +729,6 @@
         }
       });
     }, { threshold: 0.12 });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     const counters = document.querySelectorAll('[data-count]');
@@ -945,7 +750,6 @@
         counterObserver.unobserve(el);
       });
     }, { threshold: 0.5 });
-
     counters.forEach(el => counterObserver.observe(el));
   </script>
 </body>
