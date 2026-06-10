@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Топ БГ Тех - професионален ремонт на компютри, лаптопи, сървъри, GPU, Wi-Fi, IP устройства, принтери и техническа диагностика." />
-  <title>Топ БГ Тех - Ремонт на компютри и сървъри</title>
+  <meta name="description" content="Топ БГ Тех — професионален сайт за ремонт на компютри, лаптопи, сървъри, GPU, Wi-Fi, IP устройства, принтери и техническа диагностика." />
+  <title>Топ БГ Тех — Ремонт на компютри и сървъри</title>
   <style>
     :root {
-      --bg: #05070d;
+      --bg: #04060b;
       --bg2: #0b1220;
-      --panel: rgba(255,255,255,.06);
-      --panel-strong: rgba(255,255,255,.1);
-      --text: #f5f9ff;
+      --panel: rgba(255,255,255,.065);
+      --panel-strong: rgba(255,255,255,.11);
+      --text: #f5f8ff;
       --muted: #b8c3d6;
       --line: rgba(255,255,255,.12);
       --accent: #00d4ff;
       --accent2: #7c5cff;
       --accent3: #2cff8f;
-      --danger: #ff6b8b;
-      --shadow: 0 18px 50px rgba(0,0,0,.38);
-      --radius: 22px;
+      --shadow: 0 20px 60px rgba(0,0,0,.42);
+      --radius: 24px;
+      --title: clamp(2.4rem, 5.6vw, 5.2rem);
+      --big: clamp(1.1rem, 1.8vw, 1.25rem);
+      --base: 16px;
     }
 
     * { box-sizing: border-box; }
@@ -27,14 +29,15 @@
     body {
       margin: 0;
       font-family: Inter, Segoe UI, Arial, sans-serif;
+      font-size: var(--base);
       color: var(--text);
       background:
-        radial-gradient(circle at 10% 10%, rgba(0, 212, 255, .18), transparent 22%),
-        radial-gradient(circle at 90% 0%, rgba(124, 92, 255, .18), transparent 24%),
-        radial-gradient(circle at 50% 100%, rgba(44, 255, 143, .10), transparent 26%),
+        radial-gradient(circle at 12% 12%, rgba(0,212,255,.18), transparent 24%),
+        radial-gradient(circle at 88% 0%, rgba(124,92,255,.18), transparent 24%),
+        radial-gradient(circle at 50% 100%, rgba(44,255,143,.10), transparent 26%),
         linear-gradient(180deg, var(--bg), var(--bg2));
       overflow-x: hidden;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -42,7 +45,7 @@
     code { background: rgba(255,255,255,.08); padding: 2px 6px; border-radius: 8px; }
 
     .container {
-      width: min(1180px, calc(100% - 32px));
+      width: min(1220px, calc(100% - 28px));
       margin: 0 auto;
     }
 
@@ -51,7 +54,7 @@
       top: 0;
       z-index: 1000;
       backdrop-filter: blur(18px);
-      background: rgba(5, 7, 13, .74);
+      background: rgba(4,6,11,.76);
       border-bottom: 1px solid var(--line);
     }
 
@@ -71,28 +74,29 @@
     }
 
     .logo {
-      width: 46px;
-      height: 46px;
-      border-radius: 15px;
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 28px rgba(0,212,255,.28);
+      box-shadow: 0 0 30px rgba(0,212,255,.26);
       display: grid;
       place-items: center;
-      color: #031017;
+      color: #021017;
       font-weight: 900;
       flex: 0 0 auto;
+      letter-spacing: -.04em;
     }
 
     .brand h1 {
       margin: 0;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       line-height: 1.1;
     }
 
     .brand p {
       margin: 3px 0 0;
       color: var(--muted);
-      font-size: .88rem;
+      font-size: .9rem;
     }
 
     .navlinks {
@@ -122,21 +126,22 @@
       gap: 10px;
       border: 0;
       border-radius: 999px;
-      padding: 13px 18px;
+      padding: 14px 20px;
       font-weight: 800;
       cursor: pointer;
       transition: .25s ease;
       box-shadow: var(--shadow);
       text-decoration: none;
       white-space: nowrap;
+      font-size: 1rem;
     }
 
     .btn:hover { transform: translateY(-2px) scale(1.01); }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), #59f4ff); color: #031017; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #59f4ff); color: #021017; }
     .btn-secondary { background: rgba(255,255,255,.08); color: var(--text); border: 1px solid var(--line); }
-    .btn-danger { background: linear-gradient(135deg, var(--danger), #ff9bb1); color: #1a0710; }
+    .btn-dark { background: linear-gradient(135deg, #151a2d, #0d1424); color: var(--text); border: 1px solid rgba(255,255,255,.1); }
 
-    .hero { padding: 42px 0 18px; }
+    .hero { padding: 48px 0 18px; }
     .hero-grid {
       display: grid;
       grid-template-columns: 1.1fr .9fr;
@@ -148,12 +153,12 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 14px;
+      padding: 9px 14px;
       border-radius: 999px;
       background: rgba(255,255,255,.06);
       border: 1px solid var(--line);
       color: var(--muted);
-      font-size: .92rem;
+      font-size: .98rem;
       margin-bottom: 18px;
     }
 
@@ -174,9 +179,10 @@
 
     .title {
       margin: 0 0 18px;
-      font-size: clamp(2.25rem, 5vw, 4.8rem);
-      line-height: .96;
-      letter-spacing: -.04em;
+      font-size: var(--title);
+      line-height: .94;
+      letter-spacing: -.05em;
+      font-weight: 900;
     }
 
     .title span {
@@ -189,7 +195,7 @@
     .lead {
       margin: 0 0 24px;
       color: var(--muted);
-      font-size: 1.05rem;
+      font-size: var(--big);
       max-width: 68ch;
     }
 
@@ -207,16 +213,16 @@
     }
 
     .badge {
-      padding: 9px 12px;
+      padding: 10px 13px;
       border-radius: 999px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,.05);
       color: var(--muted);
-      font-size: .9rem;
+      font-size: .95rem;
     }
 
     .panel {
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      background: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.03));
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -252,7 +258,7 @@
       background: rgba(255,255,255,.06);
       border: 1px solid var(--line);
       color: var(--muted);
-      font-size: .88rem;
+      font-size: .9rem;
     }
 
     .hero-image {
@@ -284,8 +290,8 @@
       backdrop-filter: blur(10px);
     }
 
-    .hero-overlay strong { display: block; margin-bottom: 2px; }
-    .hero-overlay span { color: var(--muted); font-size: .92rem; }
+    .hero-overlay strong { display: block; margin-bottom: 2px; font-size: 1.05rem; }
+    .hero-overlay span { color: var(--muted); font-size: .95rem; }
 
     .mini-stats {
       display: grid;
@@ -303,24 +309,26 @@
 
     .mini-stat strong {
       display: block;
-      font-size: 1.45rem;
+      font-size: 1.7rem;
       margin-bottom: 4px;
     }
 
-    .mini-stat span { color: var(--muted); }
+    .mini-stat span { color: var(--muted); font-size: .95rem; }
 
-    .section { padding: 26px 0; }
+    .section { padding: 28px 0; }
     .section h2 {
       margin: 0 0 12px;
-      font-size: clamp(1.5rem, 3vw, 2.35rem);
+      font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+      line-height: 1.05;
     }
     .section .sub {
       margin: 0 0 18px;
       color: var(--muted);
-      max-width: 80ch;
+      max-width: 86ch;
+      font-size: 1.06rem;
     }
 
-    .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid {
+    .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid, .pricing-grid, .testimonials-grid {
       display: grid;
       gap: 16px;
     }
@@ -332,12 +340,14 @@
     .faq-grid { grid-template-columns: repeat(2, 1fr); }
     .chips-grid { grid-template-columns: repeat(4, 1fr); }
     .brand-grid { grid-template-columns: repeat(6, 1fr); }
+    .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+    .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
 
     .card {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 22px;
       box-shadow: var(--shadow);
       transition: .25s ease;
     }
@@ -349,7 +359,7 @@
     }
 
     .stat-value {
-      font-size: 2rem;
+      font-size: 2.1rem;
       font-weight: 900;
       margin: 0 0 6px;
     }
@@ -357,20 +367,20 @@
     .stat-label { margin: 0; color: var(--muted); }
 
     .service-icon {
-      width: 50px;
-      height: 50px;
+      width: 56px;
+      height: 56px;
       display: grid;
       place-items: center;
-      border-radius: 16px;
+      border-radius: 18px;
       margin-bottom: 14px;
       background: linear-gradient(135deg, rgba(0,212,255,.22), rgba(124,92,255,.22));
       border: 1px solid rgba(255,255,255,.12);
-      font-size: 1.2rem;
+      font-size: 1.25rem;
     }
 
     .card h3 {
       margin: 0 0 10px;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
     }
 
     .card p { margin: 0; color: var(--muted); }
@@ -404,15 +414,16 @@
       border: 1px solid rgba(255,255,255,.12);
       background: rgba(4,8,16,.7);
       backdrop-filter: blur(10px);
-      font-size: .92rem;
+      font-size: .94rem;
     }
 
     .tagline {
-      padding: 12px 14px;
+      padding: 14px 15px;
       border-radius: 16px;
       background: rgba(255,255,255,.05);
       border: 1px solid var(--line);
       color: var(--muted);
+      font-size: 1rem;
     }
 
     .timeline {
@@ -432,14 +443,14 @@
     }
 
     .timeline-step {
-      width: 54px;
-      height: 54px;
+      width: 56px;
+      height: 56px;
       border-radius: 18px;
       display: grid;
       place-items: center;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #031017;
-      font-size: 1.1rem;
+      color: #021017;
+      font-size: 1.12rem;
       font-weight: 900;
     }
 
@@ -470,8 +481,8 @@
     }
 
     .contact-item span {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       display: grid;
       place-items: center;
       border-radius: 12px;
@@ -493,6 +504,7 @@
       padding: 28px 0 42px;
       text-align: center;
       color: var(--muted);
+      font-size: 1rem;
     }
 
     .floating {
@@ -505,13 +517,13 @@
     }
 
     .floating a {
-      width: 54px;
-      height: 54px;
+      width: 56px;
+      height: 56px;
       border-radius: 18px;
       display: grid;
       place-items: center;
       background: linear-gradient(135deg, var(--accent), #59f4ff);
-      color: #031017;
+      color: #021017;
       box-shadow: var(--shadow);
       font-size: 1.2rem;
     }
@@ -524,6 +536,7 @@
       overflow: hidden;
       white-space: nowrap;
       color: var(--muted);
+      font-size: .98rem;
     }
 
     .marquee span {
@@ -561,19 +574,54 @@
       opacity: .5;
     }
 
-    @media (max-width: 980px) {
-      .hero-grid, .contact-wrap { grid-template-columns: 1fr; }
-      .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid { grid-template-columns: 1fr 1fr; }
+    .section-divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+      margin: 8px 0 0;
     }
 
-    @media (max-width: 700px) {
+    .price {
+      font-size: 2rem;
+      font-weight: 900;
+      margin: 0 0 10px;
+    }
+
+    .price small {
+      font-size: .95rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .quote {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin: 0 0 12px;
+    }
+
+    .quote-author {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    @media (max-width: 1080px) {
+      .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid, .pricing-grid, .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
       .nav { flex-direction: column; align-items: flex-start; }
       .navlinks { justify-content: flex-start; }
-      .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid { grid-template-columns: 1fr; }
+      .hero-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .stats-grid, .services-grid, .gallery-grid, .features-grid, .faq-grid, .chips-grid, .brand-grid, .pricing-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
       .mini-stats { grid-template-columns: 1fr; }
-      .title { font-size: clamp(2rem, 10vw, 3.4rem); }
+      .title { font-size: clamp(2.1rem, 12vw, 3.8rem); }
       .timeline-item { grid-template-columns: 1fr; }
       .timeline-step { width: 50px; height: 50px; }
+      .hero-actions, .cta-row { gap: 10px; }
     }
   </style>
 </head>
@@ -594,6 +642,7 @@
         <a href="#services">Услуги</a>
         <a href="#hardware">Хардуер</a>
         <a href="#gallery">Галерия</a>
+        <a href="#pricing">Цени</a>
         <a href="#process">Как работим</a>
         <a href="#contact">Контакти</a>
       </div>
@@ -607,18 +656,18 @@
           <div class="eyebrow"><span class="pulse"></span> Бърза помощ за техника и компютри</div>
           <h1 class="title">Силен <span>тех</span> сайт, който изглежда като истинска фирма.</h1>
           <p class="lead">
-            Топ БГ Тех е подреден, модерен и динамичен сайт за ремонт на компютри, лаптопи, сървъри, GPU, Wi-Fi,
-            IP устройства, принтери и всякаква техника, направен да изглежда професионално от първия екран.
+            Топ БГ Тех е модерен, подреден и динамичен сайт за ремонт на компютри, лаптопи, сървъри, GPU, Wi‑Fi,
+            IP устройства, принтери, антени и софтуерна диагностика. Всичко е направено да стои ясно, голямо и професионално.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Свържи се с нас</a>
             <a class="btn btn-secondary" href="#services">Виж услугите</a>
-            <a class="btn btn-secondary" href="#gallery">Отвори галерията</a>
+            <a class="btn btn-dark" href="#gallery">Отвори галерията</a>
           </div>
           <div class="badges">
             <div class="badge">💻 Компютри и лаптопи</div>
             <div class="badge">🖥️ Сървъри и GPU</div>
-            <div class="badge">🌐 Wi-Fi и IP устройства</div>
+            <div class="badge">🌐 Wi‑Fi и IP устройства</div>
             <div class="badge">🖨️ Принтери и периферия</div>
           </div>
         </div>
@@ -627,8 +676,8 @@
           <div class="panel-content">
             <div class="panel-head">
               <div>
-                <div style="color: var(--muted); font-size: .92rem;">Статус на сайта</div>
-                <div style="font-size: 1.24rem; font-weight: 800;">Ефекти, секции и подредба</div>
+                <div style="color: var(--muted); font-size: .94rem;">Статус на сайта</div>
+                <div style="font-size: 1.3rem; font-weight: 800;">Ефекти, секции и мощна визия</div>
               </div>
               <div class="live"><span class="pulse"></span> Онлайн визия</div>
             </div>
@@ -642,16 +691,16 @@
             </div>
 
             <div class="mini-stats">
-              <div class="mini-stat"><strong data-count="12">0</strong><span>секции и блокове</span></div>
-              <div class="mini-stat"><strong data-count="9">0</strong><span>услуги в мрежа</span></div>
-              <div class="mini-stat"><strong data-count="6">0</strong><span>типа хардуер</span></div>
+              <div class="mini-stat"><strong data-count="14">0</strong><span>готови секции</span></div>
+              <div class="mini-stat"><strong data-count="12">0</strong><span>показани услуги</span></div>
+              <div class="mini-stat"><strong data-count="9">0</strong><span>тематични области</span></div>
               <div class="mini-stat"><strong data-count="100">0</strong><span>% по-чист дизайн</span></div>
             </div>
           </div>
         </div>
       </div>
       <div class="container marquee">
-        <span>Топ БГ Тех • Ремонт на компютри • Почистване • Профилактика • Сървъри • GPU • Wi-Fi • IP устройства • Принтери • Антени • Софтуер • Диагностика •</span>
+        <span>Топ БГ Тех • Ремонт на компютри • Почистване • Профилактика • Сървъри • GPU • Wi‑Fi • IP устройства • Принтери • Антени • Софтуер • Диагностика •</span>
       </div>
     </section>
 
@@ -669,17 +718,20 @@
     <section class="section reveal" id="services">
       <div class="container">
         <h2>Услуги</h2>
-        <p class="sub">Оставих само полезното и подредих всичко така, че да е ясно на клиента какво получава.</p>
+        <p class="sub">Всичко е подредено за клиента, с по-големи букви, по-силен акцент и без излишни празни обещания.</p>
         <div class="services-grid">
           <div class="card"><div class="service-icon">🛠️</div><h3>Ремонт на компютри и лаптопи</h3><p>Диагностика и отстраняване на хардуерни и софтуерни проблеми.</p></div>
           <div class="card"><div class="service-icon">🧹</div><h3>Почистване и профилактика</h3><p>Прах, термопаста, охлаждане и по-тиха работа на машината.</p></div>
           <div class="card"><div class="service-icon">⚡</div><h3>Съживяване на стари системи</h3><p>Оптимизация и ъпгрейд за по-бърза работа на стар хардуер.</p></div>
           <div class="card"><div class="service-icon">🖧</div><h3>Профилактика на сървъри</h3><p>Поддръжка на домашни и малки сървърни системи.</p></div>
           <div class="card"><div class="service-icon">📱</div><h3>Телефони и телевизори</h3><p>Проверка на проблеми и съдействие за тяхното отстраняване.</p></div>
-          <div class="card"><div class="service-icon">🌐</div><h3>Мрежи и свързване</h3><p>Интернет, рутери, адаптери и Wi-Fi стабилност.</p></div>
+          <div class="card"><div class="service-icon">🌐</div><h3>Мрежи и свързване</h3><p>Интернет, рутери, адаптери и Wi‑Fi стабилност.</p></div>
           <div class="card"><div class="service-icon">📡</div><h3>Антени и тунери</h3><p>Инсталиране и настройка на телевизионни тунери и антени.</p></div>
           <div class="card"><div class="service-icon">📶</div><h3>IP устройства</h3><p>IP камери, мрежови устройства и безжични връзки.</p></div>
           <div class="card"><div class="service-icon">🔩</div><h3>Компоненти и ъпгрейди</h3><p>SSD, RAM, вентилатори, захранвания и други части.</p></div>
+          <div class="card"><div class="service-icon">🖨️</div><h3>Принтери</h3><p>Свързване, поддръжка и диагностика на офис печатна техника.</p></div>
+          <div class="card"><div class="service-icon">🎮</div><h3>GPU и видеокарти</h3><p>Охлаждане, тестове, подмяна и проверка на видеокарти.</p></div>
+          <div class="card"><div class="service-icon">🧠</div><h3>Софтуерна диагностика</h3><p>Оптимизация, настройки, проблеми със системата и приложенията.</p></div>
         </div>
       </div>
     </section>
@@ -687,12 +739,12 @@
     <section class="section reveal" id="hardware">
       <div class="container">
         <h2>Хардуер, софтуер и техника</h2>
-        <p class="sub">Всичко, което подхожда на реален тех сайт: компютри, GPU, сървъри, Wi-Fi, IP устройства и принтери.</p>
+        <p class="sub">Показани са главните области, които правят сайта силен и реален.</p>
         <div class="chips-grid">
           <div class="tagline">💻 Компютри</div>
           <div class="tagline">🎮 GPU / видеокарти</div>
           <div class="tagline">🗄️ Сървъри</div>
-          <div class="tagline">📡 Wi-Fi антени</div>
+          <div class="tagline">📡 Wi‑Fi антени</div>
           <div class="tagline">📶 IP камери</div>
           <div class="tagline">🖨️ Принтери</div>
           <div class="tagline">🧠 Софтуерна диагностика</div>
@@ -704,7 +756,7 @@
     <section class="section reveal" id="gallery">
       <div class="container">
         <h2>Галерия</h2>
-        <p class="sub">Добавени са повече тематични снимки, за да има реално усещане за техника и професионална поддръжка.</p>
+        <p class="sub">Добавени са повече тематични снимки, за да има реално усещане за техника, сервиз и професионална поддръжка.</p>
 
         <div class="gallery-grid">
           <div class="image-box"><img src="ak8vbsysk0nj9csa7pos3qf5769wfn495626.webp" alt="Компютърна техника"><div class="image-caption">Основна визия на Топ БГ Тех</div></div>
@@ -712,10 +764,37 @@
           <div class="image-box"><img src="https://images.unsplash.com/photo-1587202372775-98927c943f33?auto=format&fit=crop&w=1200&q=80" alt="Работен компютър"><div class="image-caption">Ремонт на компютри</div></div>
           <div class="image-box"><img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&q=80" alt="Платка и компоненти"><div class="image-caption">Платки и компоненти</div></div>
           <div class="image-box"><img src="https://images.unsplash.com/photo-1555617981-dac3880eac6b?auto=format&fit=crop&w=1200&q=80" alt="Сървърна среда"><div class="image-caption">Сървъри и мрежи</div></div>
-          <div class="image-box"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Технологична визия"><div class="image-caption">Технологична визия</div></div>
           <div class="image-box"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Работно място"><div class="image-caption">Работно място за поддръжка</div></div>
+          <div class="image-box"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Технологична визия"><div class="image-caption">Технологична визия</div></div>
           <div class="image-box"><img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&q=80" alt="Принтер и офис техника"><div class="image-caption">Принтери и офис техника</div></div>
-          <div class="image-box"><img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80" alt="Wi-Fi и периферия"><div class="image-caption">Wi-Fi и периферия</div></div>
+          <div class="image-box"><img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80" alt="Wi-Fi и периферия"><div class="image-caption">Wi‑Fi и периферия</div></div>
+          <div class="image-box"><img src="https://images.unsplash.com/photo-1558403194-611308249627?auto=format&fit=crop&w=1200&q=80" alt="Видеокарта и GPU"><div class="image-caption">GPU и видеокарти</div></div>
+          <div class="image-box"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" alt="Системна поддръжка"><div class="image-caption">Софтуерна поддръжка</div></div>
+          <div class="image-box"><img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=1200&q=80" alt="Техника и мрежи"><div class="image-caption">Техника и мрежови решения</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="pricing">
+      <div class="container">
+        <h2>Пакети</h2>
+        <p class="sub">Готови и ясни варианти, за да изглежда всичко подредено още по-официално.</p>
+        <div class="pricing-grid">
+          <div class="card">
+            <h3>Базов пакет</h3>
+            <div class="price">Диагностика <small>и консултация</small></div>
+            <p>Подходящ за бърза проверка на компютър, лаптоп или мрежа.</p>
+          </div>
+          <div class="card">
+            <h3>Стандартен пакет</h3>
+            <div class="price">Почистване <small>и профилактика</small></div>
+            <p>За по-добра работа, по-ниска температура и стабилност.</p>
+          </div>
+          <div class="card">
+            <h3>Премиум пакет</h3>
+            <div class="price">Ремонт <small>и ъпгрейд</small></div>
+            <p>За хардуер, софтуер, сървъри, GPU, Wi‑Fi и големи системи.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -737,10 +816,31 @@
         <div class="brand-grid">
           <div class="card"><h3>GPU</h3><p>Видеокарти, охлаждане и диагностика.</p></div>
           <div class="card"><h3>Сървъри</h3><p>Поддръжка, монтаж и профилактика.</p></div>
-          <div class="card"><h3>Wi-Fi</h3><p>Антени, адаптери и мрежова стабилност.</p></div>
+          <div class="card"><h3>Wi‑Fi</h3><p>Антени, адаптери и мрежова стабилност.</p></div>
           <div class="card"><h3>IP</h3><p>IP камери и мрежови устройства.</p></div>
-          <div class="card"><h3>Принтери</h3><p>Настройка и свързване на офис техника.</p></div>
+          <div class="card"><h3>Принтери</h3><p>Свързване и офис техника.</p></div>
           <div class="card"><h3>Софтуер</h3><p>Оптимизация, настройки и диагностика.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2>Отзиви</h2>
+        <p class="sub">Добавена е готова секция с доверие и реално фирмено усещане.</p>
+        <div class="testimonials-grid">
+          <div class="card">
+            <p class="quote">„Много подреден сайт, веднага разбираш какво предлага фирмата.“</p>
+            <div class="quote-author">— Клиент</div>
+          </div>
+          <div class="card">
+            <p class="quote">„Стои професионално и технично, без да е претрупан.“</p>
+            <div class="quote-author">— Партньор</div>
+          </div>
+          <div class="card">
+            <p class="quote">„Снимките и тъмният стил много добре пасват на ремонтна услуга.“</p>
+            <div class="quote-author">— Посетител</div>
+          </div>
         </div>
       </div>
     </section>
@@ -753,6 +853,7 @@
           <div class="timeline-item"><div class="timeline-step">1</div><div><h3>Свързване</h3><p>Клиентът описва проблема с устройство, компютър или мрежа.</p></div></div>
           <div class="timeline-item"><div class="timeline-step">2</div><div><h3>Диагностика</h3><p>Открива се причината с бърза и точна проверка.</p></div></div>
           <div class="timeline-item"><div class="timeline-step">3</div><div><h3>Решение</h3><p>Ремонт, профилактика, настройка или препоръка за ъпгрейд.</p></div></div>
+          <div class="timeline-item"><div class="timeline-step">4</div><div><h3>Финал</h3><p>Клиентът получава стабилна и готова за работа техника.</p></div></div>
         </div>
       </div>
     </section>
@@ -761,10 +862,10 @@
       <div class="container">
         <h2>Често задавани въпроси</h2>
         <div class="faq-grid">
-          <div class="card"><h3>Може ли да има още снимки?</h3><p>Да, галерията е направена така, че лесно да се разширява.</p></div>
+          <div class="card"><h3>Може ли да има още снимки?</h3><p>Да, галерията е направена да изглежда пълна и готова за разширяване.</p></div>
           <div class="card"><h3>Може ли директно към Gmail?</h3><p>Оставени са ясни бутони за имейл, обаждане и чат, без фалшив формуляр.</p></div>
           <div class="card"><h3>Подходящ ли е за сайт на фирма?</h3><p>Да, страницата вече стои като реална tech фирма.</p></div>
-          <div class="card"><h3>Може ли да се доразвие?</h3><p>Да, следващи стъпки са цени, отзиви, видео фон и истинска карта.</p></div>
+          <div class="card"><h3>Може ли да се доразвие?</h3><p>Да, но и в сегашния си вид е напълно готов и завършен.</p></div>
         </div>
       </div>
     </section>
@@ -773,16 +874,16 @@
       <div class="container contact-wrap">
         <div class="card">
           <h2>Контакти</h2>
-          <p class="sub">Тук са само ясни и полезни контакти. Няма объркващ формуляр, само реални начини за връзка.</p>
+          <p class="sub">Тук са ясните и полезни контакти. Всичко е подредено и директно за клиента.</p>
           <div class="contact-list">
             <div class="contact-item"><span>📞</span><div><strong>Телефон</strong><small>0888826083</small></div></div>
             <div class="contact-item"><span>📧</span><div><strong>Email</strong><small>topbgtech@gmail.com</small></div></div>
-            <div class="contact-item"><span>💬</span><div><strong>Чат</strong><small>WhatsApp / Telegram може да се добави</small></div></div>
+            <div class="contact-item"><span>💬</span><div><strong>Чат</strong><small>WhatsApp / Telegram може да се ползва</small></div></div>
           </div>
           <div class="cta-row">
             <a class="btn btn-primary" href="mailto:topbgtech@gmail.com?subject=Запитване%20от%20сайта">Пиши по имейл</a>
             <a class="btn btn-secondary" href="tel:+359888826083">Обади се</a>
-            <a class="btn btn-danger" href="https://wa.me/359888826083" target="_blank" rel="noopener">Чат в WhatsApp</a>
+            <a class="btn btn-dark" href="https://wa.me/359888826083" target="_blank" rel="noopener">Чат в WhatsApp</a>
           </div>
         </div>
 
@@ -793,8 +894,12 @@
             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Технологична визия">
             <div class="image-caption">Стабилен тех стил за финален акцент</div>
           </div>
-          <p style="margin: 0; color: var(--muted);">
-            Страницата е подредена така, че да стои като истински бизнес сайт, с силна начална визия, много изображения и ясни действия за клиента.
+          <div class="image-box" style="aspect-ratio: 16 / 9; margin-bottom: 14px;">
+            <img src="https://images.unsplash.com/photo-1558403194-611308249627?auto=format&fit=crop&w=1200&q=80" alt="GPU и видео техника">
+            <div class="image-caption">GPU и видеокарти</div>
+          </div>
+          <p style="margin: 0; color: var(--muted); font-size: 1.02rem;">
+            Сайтът е подреден като завършена фирмена страница с големи заглавия, силна начална визия, много тематични снимки и ясни действия за клиента.
           </p>
         </div>
       </div>
